@@ -27,7 +27,7 @@ BASE=$PWD
 LOAD=$BASE/input
 SAVE=$BASE/results
 
-module load julia/1.9.2
+module load julia/1.9.
 
 number=$SGE_TASK_ID
 
