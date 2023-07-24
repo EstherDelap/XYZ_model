@@ -9,7 +9,7 @@ function main()
     Γ_deph = 0
     Γ_decay = 0.025
     Ω = 0
-    α = [1,1,1]
+    α = [1.0,1.0,1.0] #these must be FLOATs
     outfile = "results.jld2"
     rv = DTWA.repeated_euler(dim, N,number_repeats,Γ_deph, Γ_decay,Ω, α, "XYZ")
     jldsave(outfile; collective_spin = rv)
