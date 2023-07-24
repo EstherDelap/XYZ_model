@@ -11,8 +11,8 @@ function main()
     Ω = 0
     α = [1.0,1.0,1.0] #these must be FLOATs
     outfile = "results.jld2"
-    rv = DTWA.repeated_euler(dim, N,number_repeats,Γ_deph, Γ_decay,Ω, α, "XYZ")
-    jldsave(outfile; collective_spin = rv)
+    rv1,rv2 = DTWA.repeated_euler(dim, N,number_repeats,Γ_deph, Γ_decay,Ω, α, "XYZ")
+    jldsave(outfile; collective_spin = rv1, average = rv2)
 end
 
 main()
